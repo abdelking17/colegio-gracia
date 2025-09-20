@@ -7,6 +7,11 @@ import React from 'react';
 import "swiper/css/pagination";
 import { motion, useScroll, useTransform } from "framer-motion";
 import SpiralIconsSection from "@/components/SpiralIconsSection";
+import dynamic from "next/dynamic";
+
+const RobotAssistant = dynamic(() => import("@/components/RobotAssistant"), {
+  ssr: false,
+});
 
 
 
@@ -34,6 +39,8 @@ export default function Home() {
           ))}
         </Swiper>
       </div>
+      <RobotAssistant />
+
       <section className="relative pt-6 pb-0 text-center bg-gradient-to-b from-white to-slate-50">
   {/* Imagen encima del título */}
   <motion.img
@@ -898,7 +905,9 @@ export default function Home() {
 </section>
 
 
- <SpiralIconsSection />
+ <div className="relative">
+   <SpiralIconsSection />
+ </div>
 {/* 9. Contacto Rápido con Dirección */}
 <section className="py-16 px-4 sm:px-6 md:px-12 text-center bg-gradient-to-br from-blue-50 to-indigo-100 relative overflow-hidden">
   {/* Elementos decorativos de fondo */}

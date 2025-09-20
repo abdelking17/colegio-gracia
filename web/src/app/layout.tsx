@@ -1,11 +1,14 @@
 import "./globals.css";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Navbar from "../components/Navbar";
 
 export const metadata: Metadata = {
   title: "Centro Educativo Gracia",
   description: "AppWeb 100% responsive del CEG",
   manifest: "/manifest.webmanifest",
+};
+
+export const viewport: Viewport = {
   themeColor: "#0E2A47",
 };
 
